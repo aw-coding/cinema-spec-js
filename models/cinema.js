@@ -34,4 +34,15 @@ Cinema.prototype.findFilmsByYear = function (year) {
   return foundFilm
 }
 
+Cinema.prototype.filterFilmsByLength= function (length) {
+  const foundFilm = this.films.every((film) => {
+    return film.length > length;
+  })
+  return foundFilm
+}
+
+
+
+
+
 module.exports = Cinema;
